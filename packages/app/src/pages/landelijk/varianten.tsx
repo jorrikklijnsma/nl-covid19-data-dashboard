@@ -172,7 +172,11 @@ export default function CovidVariantenPage(props: StaticProps<typeof getStaticPr
           {variantLabels && (
             <VariantsTableTile
               data={variantTable}
-              text={{ ...textNl.varianten_tabel, variantCodes: variantLabels, description: variantenTableDescription }}
+              text={{
+                ...textNl.varianten_tabel,
+                variantCodes: variantLabels,
+                description: variantenTableDescription,
+              }}
               sampleThresholdPassed={sampleThresholdPassed}
               source={textNl.bronnen.rivm}
               dates={{
@@ -202,7 +206,10 @@ export default function CovidVariantenPage(props: StaticProps<typeof getStaticPr
             <>
               {archivedVariantChart && variantLabels && (
                 <VariantsStackedAreaTile
-                  text={{ ...textNl.varianten_over_tijd_grafiek, variantCodes: variantLabels as VariantDynamicLabels }}
+                  text={{
+                    ...textNl.varianten_over_tijd_grafiek,
+                    variantCodes: variantLabels as VariantDynamicLabels,
+                  }}
                   values={archivedVariantChart}
                   variantColors={variantColors}
                   metadata={{
