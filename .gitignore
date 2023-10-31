@@ -36,3 +36,4 @@ exports
 
 # custom json folders
 /packages/app/public/json*
+move_repo.sh
